@@ -1,27 +1,3 @@
-# LoggingUtil Python 
-A custom made python logging utility, designed for Discord.py/Py-Cord 
-
-
-## Requirements
-> python-dotenv==1.0.1
-
-## How to setup
-This system uses a .ENV style configuration, however I will be adding a .JSON, or a .INI configuration option later in the project's timeline. 
-
-### EXAMPLE `.ENV`
-```
-# Logging Configeration
-# The path must be accesable, by default the path is set to logging/logs folder, you can change it to any path you want as long as it is accesable.
-
-LOG_PATH = "logging_\logs"
-# If you don't want to log the database queries, set this to False, by default it is set to True
-LOG_DATABASE = True 
-```
-
-### Basic Usage
-
-Non-Class Usage.
-```
 from logging_.logger import Logger
 
 logs = Logger()
@@ -65,5 +41,3 @@ logs.log("I am logging a message that is a error", "main_system", "Administrator
 # Errors do not log to console unless requested 
 # This will log to a second file outside of the default file.
 logs.log("I am logging a message that is a error", "main_system", "Administrator", True, True, default=False)
-
-```
